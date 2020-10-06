@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import los from '../assets/vamosestarbien.svg';
+
 import '../App.css';
 class Contacto extends Component {
     render() {
