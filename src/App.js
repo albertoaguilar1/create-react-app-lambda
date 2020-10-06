@@ -1,30 +1,42 @@
 import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+
+import "./App.css";
+
+import Nav from './Nav';
+import Home from './components/Home';
+import Productos from './components/Productos';
+import Contacto from './components/Contacto';
+import Acerca from './components/Acerca';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+
 
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"></img>
-        </header>
-        <body>
-          <div className="app container">
-            <div clasName="jumnbotron">
-              <p className="lead text-cemter">Buscador de productos</p>
 
-            </div>
-            <h1>Pagina en construccion</h1>
-            <h2>pagina en construccion</h2>
-          </div>
-        </body>
-      </div>
-    )
+
+      <Router>
+
+        <div className="App">
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={Home} />
+
+            <Route path="/Contacto" component={Contacto} />
+            <Route path="/Acerca" component={Acerca} />
+
+            <Route path="/Productos" component={Productos} />
+
+          </Switch>
+        </div>
+      </Router>
+    );
   }
 }
+
 
 
 

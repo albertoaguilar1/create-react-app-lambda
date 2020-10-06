@@ -1,26 +1,34 @@
+
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  
+  height: 15vmin;
 }
 
-.App-header {
+.nav {
   background-color: #FDD7E4;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
-.App-link {
+.nav-links {
+  width:50%;
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
   color: #FF00FF;
+  list-style:none ;
 }
+
+
 
 @keyframes App-logo-spin {
   from {
@@ -28,5 +36,32 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {
+  .nav {
+    background-color: #FDD7E4;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+  }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+  .nav {
+    background-color: #FDD7E4;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    
   }
 }
